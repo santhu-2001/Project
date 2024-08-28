@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: darkgrey;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    min-height: 100vh;
+}
+
+.container {
+    width: 600px;
+    background-color: white;
+    border-radius: 4px;
+    overflow: hidden;
+    align-items: center;
+    border: solid black 4px; 
+    position:relative;
+}
+
+.header {
+    padding: 30px;
+    text-align: center;
+    background-color: aliceblue;
+    font-size: 35px;
+}
+
+.form {
+    padding: 20px 20px;
+}
+
+.input input,
+.input textarea,
+.input select {
+    display: block;
+    padding: 7px;
+    border-radius: 4px;
+    border: solid black 2px;
+    width: 100%;
+}
+
+.input label {
+    display: inline-block;
+}
+
+.spec {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.spec input[type="radio"],
+.spec input[type="checkbox"] {
+    margin: 0;
+    padding: 0;
+    width: 18px;
+    height: 18px;
+}
+
+.spec label {
+    margin-left: 5px;
+}
+
+.submit-reset {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    text-align: center;
+    height: 40px;
+    width: 80px;
+    background-color: blueviolet;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: darkviolet;
+}
+
+.popup-form {
+    padding: 20px 20px;
+}
+
+.ui-dialog-titlebar-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+     z-index: 1000; /* Ensure it's above other content */ 
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+#openForm {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000; /* Ensure it's above other content */
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.container1{
+    width: 500px;
+    height: 450px; 
+    background-color: white;
+    border-radius: 4px;
+    overflow:scroll;
+    align-items: center;
+    border: solid black 4px; 
+
+}

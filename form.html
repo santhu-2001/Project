@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Registration</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link href="form.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+    <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <script src="form.js"></script>
+
+
+
+</head>
+
+
+
+
+
+
+
+
+<body>
+    <!-- <div>
+        <button id="openForm" class="btn1"> Open </button>
+    </div> -->
+    <!-- <div id="dialog" style="display:none;"> -->
+
+
+    <div class="container">
+        <div class="header"> Company Register form </div>
+        <form class="form">
+            <div class="input">
+                UserName: <input id="Username" type="text" name="username" required>
+            </div>
+            <br>
+            <div class="input">
+                Phone NO: <input id="Phoneno" type="text" name="phoneno" required>
+            </div>
+            <br>
+            <div class="input">
+                Email Id: <input id="Emailid" type="text" name="email">
+            </div>
+            <br>
+            <div class="input">
+                Password: <input id="Password" type="password" name="password" required autocomplete="new-password">
+            </div>
+            <br>
+            <div class="input">
+                Confirm Password: <input id="confirm" type="password">
+            </div>
+            <br>
+            <div class="input">
+                <label for="datepicker">Select Date:</label>
+                <input type="text" id="datepicker">
+            </div>
+            <br>
+            <div class="input">
+                <label for="browser">Select your program</label>
+                <input list="browsers" name="browser" id="browser">
+                <datalist id="browsers">
+                    <option value="Project demo">
+                    <option value="Interview">
+                    <option value="Business Meeting">
+                    <option value="Project Discussion">
+                    <option value="Classic Meeting">
+                </datalist>
+            </div>
+            <br>
+            <div class="input">
+                <p>Select gender</p>
+                <div class="spec">
+                    <input type="radio" id="Male" name="gender" value="Male">
+                    <label for="Male">Male</label>
+                    <input type="radio" id="Female" name="gender" value="Female">
+                    <label for="Female">Female</label>
+                    <input type="radio" id="Others" name="gender" value="Others">
+                    <label for="Others">Others</label>
+                </div>
+            </div>
+            <br>
+            <div class="input">
+                <p>Address:</p>
+                <textarea id="Address" cols="55" rows="10"></textarea>
+            </div>
+            <br>
+            <div class="input">
+                <p>Choose Session</p>
+                <select id="session">
+                    <option value="Morning">Morning</option>
+                    <option value="Afternoon">Afternoon</option>
+                    <option value="Evening">Evening</option>
+                    <option value="Online">Online</option>
+                </select>
+            </div>
+            <br>
+            <div class="input">
+                <p>Terms and condition</p>
+                <div class="spec">
+                    <input type="checkbox" id="Agree" name="terms" value="Agree">
+                    <label for="Agree">Agree</label>
+                    <input type="checkbox" id="Disagree" name="terms" value="Disagree">
+                    <label for="Disagree">Disagree</label>
+                    <input type="checkbox" id="OthersTerms" name="terms" value="Others">
+                    <label for="OthersTerms">Others</label>
+                </div>
+            </div>
+            <br>
+            <div class="submit-reset">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+    </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="form.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+
+</body>
+
+</html>

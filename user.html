@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <link rel="stylesheet" href="user.css"> 
+    <script src="user.js"></script>
+  
+</head>
+<body>
+    <div class="management-container">
+        <div class="table-header">
+            <h2 style="text-align: center;">User Details </h2>
+            <button class="add-user-btn" onclick="addUser()">Add User</button>
+        </div>
+
+        <table class="user-table">
+            <thead>
+                <tr>
+                    <th>UserName</th>
+                    <th>Phone NO</th>
+                    <th>Email Id</th>
+                    <th>Password</th>
+                    <th>Confirm Password</th>
+                    <th>Select Date</th>
+                    <th>Select your program</th>
+                    <th>Select gender</th>
+                    <th>Address</th>
+                    <th>Choose Session</th>
+                    <th>Terms and condition</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="userTableBody">
+                <!-- Dynamic user rows will be added here -->
+            </tbody>
+        </table> 
+    </div>
+</body>
+</html>
