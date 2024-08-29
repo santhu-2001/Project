@@ -1,41 +1,49 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize jQuery UI datepicker
-    $("#datepicker").datepicker();
+    const form = document.querySelector('.form');
 
-    // Handle form submission
-    document.querySelector('.form').addEventListener('submit', function(event) {
+    form.addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent the default form submission
 
-        // Get form values
-        const username = document.getElementById('Username').value;
-        const phoneno = document.getElementById('Phoneno').value;
-        const email = document.getElementById('Emailid').value;
-        const password = document.getElementById('Password').value;
-        const confirm = document.getElementById('confirm').value;
-        const date = document.getElementById('datepicker').value;
-        const program = document.getElementById('browser').value;
-        const gender = document.querySelector('input[name="gender"]:checked')?.value;
-        const address = document.getElementById('Address').value;
-        const session = document.getElementById('session').value;
-        const terms = Array.from(document.querySelectorAll('input[name="terms"]:checked')).map(el => el.value).join(', ');
-
-        // Validate form
-        if (password !== confirm) {
-            alert("Passwords do not match!");
-            return;
-        }
-
-        // Prepare data for storage
-        const userData = {
-            username, phoneno, email, password, date, program, gender, address, session, terms
+        // Collect the form data
+        const formData = {
+            id: Date.now(), // Using timestamp as a placeholder ID; modify as needed
+            firstName: document.getElementById('first').value,
+            lastName: document.getElementById('last').value,
+            age: document.getElementById('Age').value,
+            email: document.getElementById('email').value,
+            gender: document.getElementById('gender').value
         };
 
-        // Store user data in localStorage (or send to server)
-        let users = JSON.parse(localStorage.getItem('users')) || [];
-        users.push(userData);
-        localStorage.setItem('users', JSON.stringify(users));
+        // POST the form data to the API
+        fetch('https://dummyjson.com/users/add', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData), // Ensure the body is JSON
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', JSON.stringify(data)); // Log the JSON response
 
-        // Redirect to user management page
-        window.location.href = 'user.html';
+            // Show success alert
+
+            // Show form data alert
+            alert('Form Data:\n' +
+                  'First Name: ' + formData.firstName + '\n' +
+                  'Last Name: ' + formData.lastName + '\n' +
+                  'Age: ' + formData.age + '\n' +
+                  'Email: ' + formData.email + '\n' +
+                  'Gender: ' + formData.gender);
+
+           
+            
+            alert('User successfully added!');
+
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            alert('There was an error adding the user.');
+        });
     });
 });
