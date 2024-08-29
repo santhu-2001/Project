@@ -38,81 +38,34 @@
         <div class="header"> Company Register form </div>
         <form class="form">
             <div class="input">
-                UserName: <input id="Username" type="text" name="username" required>
+                FName: <input id="first" type="text" name="FName" required>
             </div>
             <br>
             <div class="input">
-                Phone NO: <input id="Phoneno" type="text" name="phoneno" required>
+               LName: <input id="last" type="text" name="Lname" required>
             </div>
             <br>
             <div class="input">
-                Email Id: <input id="Emailid" type="text" name="email">
+                Age: <input id="Age" type="text" name="Age">
             </div>
             <br>
             <div class="input">
-                Password: <input id="Password" type="password" name="password" required autocomplete="new-password">
+                Email: <input id="email" type="Email" name="Email" required >
             </div>
             <br>
             <div class="input">
-                Confirm Password: <input id="confirm" type="password">
-            </div>
-            <br>
-            <div class="input">
-                <label for="datepicker">Select Date:</label>
-                <input type="text" id="datepicker">
-            </div>
-            <br>
-            <div class="input">
-                <label for="browser">Select your program</label>
-                <input list="browsers" name="browser" id="browser">
-                <datalist id="browsers">
-                    <option value="Project demo">
-                    <option value="Interview">
-                    <option value="Business Meeting">
-                    <option value="Project Discussion">
-                    <option value="Classic Meeting">
-                </datalist>
-            </div>
-            <br>
-            <div class="input">
-                <p>Select gender</p>
-                <div class="spec">
-                    <input type="radio" id="Male" name="gender" value="Male">
-                    <label for="Male">Male</label>
-                    <input type="radio" id="Female" name="gender" value="Female">
-                    <label for="Female">Female</label>
-                    <input type="radio" id="Others" name="gender" value="Others">
-                    <label for="Others">Others</label>
-                </div>
-            </div>
-            <br>
-            <div class="input">
-                <p>Address:</p>
-                <textarea id="Address" cols="55" rows="10"></textarea>
-            </div>
-            <br>
-            <div class="input">
-                <p>Choose Session</p>
-                <select id="session">
-                    <option value="Morning">Morning</option>
-                    <option value="Afternoon">Afternoon</option>
-                    <option value="Evening">Evening</option>
-                    <option value="Online">Online</option>
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="" disabled selected>Select</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
                 </select>
             </div>
+            
+            
+            
             <br>
-            <div class="input">
-                <p>Terms and condition</p>
-                <div class="spec">
-                    <input type="checkbox" id="Agree" name="terms" value="Agree">
-                    <label for="Agree">Agree</label>
-                    <input type="checkbox" id="Disagree" name="terms" value="Disagree">
-                    <label for="Disagree">Disagree</label>
-                    <input type="checkbox" id="OthersTerms" name="terms" value="Others">
-                    <label for="OthersTerms">Others</label>
-                </div>
-            </div>
-            <br>
+            
             <div class="submit-reset">
                 <input type="submit" value="Submit">
                 <input type="reset" value="Reset">
